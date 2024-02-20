@@ -21,6 +21,11 @@ mongoose
   .catch((err) => console.log(err));
 
 //===========⬇️ API end-points
+
+app.get("/health", async (req: Request, res: Response) => {
+  res.send({ message: "Health OK!" });
+});
+
 app.use("/api/my/user", myUserRoute);
 
 //........................................................
